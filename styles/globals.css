@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.steel-gradient {
+  background: radial-gradient(circle at top left, #4b5563, #020617);
+}
+
+.card-surface {
+  @apply bg-slate-900/70 border border-slate-700/60 rounded-xl shadow-lg shadow-black/40;
+}
+
+.pill {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border border-slate-600 bg-slate-900/80;
+}
+
+.mm-splash-backdrop {
+  background: radial-gradient(circle at top, #020617 0%, #020617 35%, #020617 60%, #020617 100%);
+}
+
+@keyframes mmSplashLogo {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    letter-spacing: 0.2em;
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.35em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.3em;
+  }
+}
+
+@keyframes mmSplashFade {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mm-splash-logo {
+  animation: mmSplashLogo 1.4s ease-out forwards;
+}
+
+.mm-splash-fade {
+  animation: mmSplashFade 1.8s ease-out forwards;
+}
+
