@@ -10,9 +10,6 @@ const nextConfig = {
   output: "export",
   // Output to docs folder for GitHub Pages
   distDir: "docs",
-  // Adjust paths so the app works under /mm-project-engineers-webapp on GitHub Pages
-  basePath: isProd ? "/mm-project-engineers-webapp" : "",
-  assetPrefix: isProd ? "/mm-project-engineers-webapp/" : "",
   // Disable Image Optimization for static export
   images: {
     unoptimized: true,
